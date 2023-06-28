@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.page{
+    width: 100%;
+    height: 100vh;
+}
+.ciba{
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.img{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+.img2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(images/ddm2.jpg);
+}
+.img3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(images/mpdf.jpg);
+}
+.img4{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/fqfp.jpg);
+}
+.img5{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/cwh.webp);
+}
+.img6{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/gswh.webp);
+}
+.ciba4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.i1{
+    background-image: url(images/ciba.jpg);
+}
+.i2{
+    background-image: url(images/ciba2.jpg);
+}
+.i3{
+    background-image: url(images/ciba3.jpg);
+}
+.i4{
+    background-image: url(images/ciba4.jpg);
+}

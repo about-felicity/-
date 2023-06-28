@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navigation_page{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(images/sky.jpg);
+    background-size: cover;
+}
+.navigation_page_sky{
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cloud1{
+    animation: cloud1 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.cloud2{
+    animation: cloud2 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+@keyframes cloud1{0%{transform: translateX(350px);}100%{transform: translateX(-200px);}}
+@keyframes cloud2{0%{transform: translateX(-350px);}100%{transform: translateX(200px);}}
+.nav_top{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2000;
+}
+.nav_top_child{
+    height: 70px;
+    width: 200px;
+    text-align: center;
+    margin-top: 40px;
+}
+.nav_top_child span{
+    color: #ffffff;
+    font-size: 18px;
+}
+.line{
+    width: 0;
+    height: 5px;
+    background-color: #ffffff;
+    position: relative;
+    top: 21px;
+    transition: 0.5s;
+}
+.nav_top_child:hover .line{
+    width: 200px;
+}
+.nav_top_choose{
+    width: 200px;
+    background-color: #333333;
+    position: relative;
+    top: 5px;
+    opacity: 0;
+    display: none;
+    font-family: 'Yu Gothic UI Semibold';
+}
+.nav_top_choice{
+    font-size: 15px;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    z-index: 200;
+}
+.nav_top_child a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav_top_choice:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+@keyframes slider{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.nav_top_child:hover .nav_top_choose{
+    animation: slider 0.3s linear;
+    animation-fill-mode: forwards;
+}
+label{
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    right: -100px;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e8e8e8;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+input:checked + .slider{
+    background-color: rgba(51,51,51,1);
+}
+input[type=checkbox]{
+    display: none;
+}
+.slider::before{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-image: url(images/太阳.png);
+    background-size: cover;
+    content: '';
+    display: block;
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: boucel 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    top: 3.5px;
+    left: 4px;
+}
+input:checked + .slider::before{
+    background-image: url(images/月亮.png);
+    background-size: cover;
+    transform: translateX(30px);
+    animation: boucer 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@keyframes boucer{0%{left: 4px;}50%{left: 10px;}100%{left: 4px;}}
+@keyframes boucel{0%{left: 4px;}50%{left: -2px;}100%{left: 4px;}}
+.page{
+    height: 100vh;
+}
+.pg1_chengdu_text{
+    width: 400px;
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 180px;
+    top: 1100px;
+    opacity: 0;
+}
+.pg1_chengdu_image{
+    width: 921px;
+    height: 549px;
+    background-image: url(images/im1.png);
+    background-size: cover;
+    position: absolute;
+    right: 180px;
+    top: 850px;
+    opacity: 0;
+}
+.pg1_chengdu_text_{
+    animation: pg1_slider_text 0.5s linear;
+    animation-fill-mode: forwards;
+}
+.pg1_chengdu_image_{
+    animation: pg1_slider_image 0.5s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes pg1_slider_text{
+    0%{
+        opacity: 0;
+        left: 0;
+    }
+    20%{
+        opacity: 0;
+        left: 90px;
+    }
+    100%{
+        opacity: 1;
+        left: 180px;
+    }
+}
+@keyframes pg1_slider_image{
+    0%{
+        opacity: 0;
+        right: 0;
+    }
+    20%{
+        opacity: 0;
+        right: 90px;
+    }
+    100%{
+        opacity: 1;
+        right: 180px;
+    }
+}
+.pg2 .intro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
+}
+.pg2 .text{
+    width: 400px;
+    height: 500px;
+    margin-left: 100px;
+}
+.pg2 .map{
+    width: 450px;
+    height: 450px;
+    background-color: #e8e8e8;
+    margin-top: -50px;
+    border-radius: 40px;
+    margin-right: 100px;
+}
+.pg2 .button{
+    margin-top: -20px;
+}
+.pg2 button{
+    outline: none;
+    border-style: none;
+    background-color: transparent;
+    margin-left: 205px;
+}
+.pg2 .triggle_before{
+    display: block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-color: #333;
+    border-width: 2px;
+    border-style: solid;
+    border-left: none;
+    border-bottom: none;
+    margin-left: 320px;
+    margin-top: -13px;
+    transform: rotate(-45deg);
+}
+.pg2 .triggle_after{
+    margin-top: -15px;
+    transform: rotate(-225deg);
+    transition: 0.2s;
+}
+.pg2 .triggle_after2{
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+.pg2 .intro_more{
+    width: 1050px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: none;
+    animation: intro_more 0.5s linear;
+}
+@keyframes intro_more{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

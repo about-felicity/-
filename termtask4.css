@@ -1,0 +1,142 @@
+.pg6 .panda_head{
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(images/panda2.jpg);
+    background-size: 100%;
+    border-radius: 30px;
+    margin-top: 200px;
+    opacity: 0;
+    transform: translateY(100px);
+}
+@keyframes panda{
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.pg6 .panda_head_after{
+  animation: panda 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-fill-mode: forwards;
+}
+.pg6 .text{
+    margin-left: 80px;
+}
+.pg6 .panda_thumb_frame{
+    width: 1100px;
+    height: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e8e8e8;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.panda_thumb_frame_num1{
+    font-size: 15px;
+    position: relative;
+    top: -15px;
+    left: 10px;
+    color: #cdcdcd;
+    letter-spacing: 1px;
+}
+.panda_thumb_frame_num{
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    left: 15px;
+    color: #cdcdcd;
+    letter-spacing: 1px;
+}
+.thumb_after{
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    background-image: url(images/推荐2.png);
+}
+.pg7 .article,.pg8 .article,.pg9 .article{
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-family: '微软雅黑';
+    line-height: 40px;
+}
+.pg7 .panda_images{
+    width: 1100px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panda_small_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-item-small{
+    background-color: #eee;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    transition: 0.5s;
+    width: 175px;
+    min-height: 175px;
+  }
+  .image-item-big {
+    width: 400px;
+    min-height: 400px;
+    background-color: #eee;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  .image-1:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .gallery-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    background-color: #22222288;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery-mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+    position: relative;
+    scale: 0.7;
+    top: -6%;
+  }
+  .mask-off {
+    visibility: hidden;
+    background-color: #22222200;
+  }
+  .mask-off img {
+    visibility: hidden;
+    opacity: 0;
+  }

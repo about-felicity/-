@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="termtask.css">
+    <link rel="stylesheet" href="termtask2.css">
+    <link rel="stylesheet" href="termtask3.css">
+    <link rel="stylesheet" href="termtask4.css">
+    <link rel="stylesheet" href="termtask5.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <title>成都</title>
+</head>
+<body>
+    <div class="navigation_page">
+        <div class="navigation_page_sky">
+            <img class="cloud1" style="transform: translateX(350px);" src="images/clouds.png">
+            <div><span style="font-size: 60px; font-family: 'Yu Gothic UI Semibold'; color: #ffffff; letter-spacing: 5px;">EXPLORE</span></div>
+            <img class="cloud2" style="transform: translateX(-350px);" src="images/clouds.png">
+        </div>
+        <div class="nav_top" id="nav_top">
+            <div class="logo" style="margin-left: 20px; position: relative; left: -100px;">
+                <img width="100px" height="100px" src="images/logo.png">
+            </div>
+            <div class="nav_top_child">
+                <span>Local&nbsp;food</span>
+                <div class="line">
+                    <div class="nav_top_choose">
+                        <div class="nav_top_choice"><a href="termtask3.html">糍粑冰粉</a></div>
+                        <div class="nav_top_choice"><a href="termtask3.html">担担面</a></div>
+                        <div class="nav_top_choice"><a href="termtask3.html">麻婆豆腐</a></div>
+                        <div class="nav_top_choice"><a href="termtask3.html">夫妻房肺片</a></div>
+                        <div class="nav_top_choice"><a href="termtask3.html">......</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_top_child">
+                <span>Must-go place</span>
+                <div class="line">
+                    <div class="nav_top_choose">
+                        <div class="nav_top_choice"><a href="#places">春熙路</a></div>
+                        <div class="nav_top_choice"><a href="#places">人民公园</a></div>
+                        <div class="nav_top_choice"><a href="#places">宽窄巷子</a></div>
+                        <div class="nav_top_choice"><a href="#places">天府广场</a></div>
+                        <div class="nav_top_choice"><a href="#places">九眼桥</a></div>
+                        <div class="nav_top_choice"><a href="#places">......</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_top_child">
+                <span>Historical site</span>
+                <div class="line">
+                    <div class="nav_top_choose">
+                        <div class="nav_top_choice"><a href="#places">杜甫草堂(浣花溪公园)</a></div>
+                        <div class="nav_top_choice"><a href="#qingchengshan">青城山</a></div>
+                        <div class="nav_top_choice">......</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_top_child">
+                <span>Local&nbsp;culture</span>
+                <div class="line">
+                    <div class="nav_top_choose">
+                        <div class="nav_top_choice"><a href="#chuanju">川剧文化</a></div>
+                        <div class="nav_top_choice"><a href="termtask2.html">成都茶文化</a></div>
+                        <div class="nav_top_choice"><a href="termtask2.html">成都古蜀文化</a></div>
+                        <div class="nav_top_choice">......</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_top_child">
+                <span>Special</span>
+                <div class="line">
+                    <div class="nav_top_choose">
+                        <div class="nav_top_choice"><a href="#panda">熊猫</a></div>
+                        <div class="nav_top_choice"><a href="#panda">......</a></div>
+                    </div>
+                </div>
+            </div>
+            <label for="switch">
+                <input type="checkbox" id="switch" class="switch">
+                <span class="slider" id="slider"></span>
+            </label>
+        </div>
+    </div>
+    <div class="page pg1">
+        <div class="pg1_chengdu_image" id="pg1_chengdu_image"></div>
+        <div class="pg1_chengdu_text" id="pg1_chengdu_text">
+            <span style="font-size: 60px; font-family: 'Yu Gothic UI Semibold';">Cheng&nbsp;Du</span>
+        </div>
+    </div>
+    <div class="page pg2">
+        <div class="intro">
+            <div class="text"><span style="font-size: 20px; letter-spacing: 2px; font-family: '黑体';">成都市是四川省省会，也是全国15个副省级城市之一，地处四川盆地西部，青藏高原东缘，东北与德阳市、东南与资阳市毗邻，南面与眉山市相连，西南与雅安市、西北与阿坝藏族羌族自治州接壤；地理位置介于东经102°54′～104°53′、北纬30°05′～31°26′之间。2017年，全市土地面积为14335平方公里、占全省总面积（48.5万平方公里）的2.95％；市区面积为3639.81平方公里，其中市辖区建成区面积885.6平方公里。截至2017年，成都市辖锦江、青羊、金牛、武侯、成华、龙泉驿、青白江、新都、温江、双流、郫都11个区，简阳、都江堰、彭州、邛崃、崇州5个县级市，金堂、大邑、蒲江、新津4个县。成都市有国家级新区――四川天府新区成都直管区，国家自主创新示范区――成都高新技术产业开发区，国家级经济技术开发区――成都经济技术开发区。</span></div>
+            <div class="map" id="map" ></div>
+        </div>
+        <div class="button">
+            <button id="more"><span style="font-size: 18px; font-family: '黑体';">点击查看更多</span></button>
+            <div class="triggle_before"></div>
+        </div>
+        <div class="intro_more"><span style="font-size: 14px; letter-spacing: 2px;">成都市地处四川盆地西部边缘，地势倾斜，西部由深丘和山地组成，最高海拔为5364米；东部为成都平原和部分低山丘陵，海拔一般为750米左右，最低处为359米。由于垂直高差大，形成三分之一平原、三分之一丘陵、三分之一高山独特地貌。不同气候形成垂直气候带，生物资源丰富，利于农业和旅游业发展。</span></div>
+    </div>
+    <div class="page pg3">
+        <div class="intro">
+            <div class="images">
+                <img id="pg3_images" width="600px" height="423px" style="-webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+                filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));" src="images/im4.png" alt="彭镇老茶馆"/>
+                <div class="images_back" id="pg3_back"></div>
+            </div>
+            <div class="text" style="margin-left: 50px;" id="pg3_text"><div class="frame_front"></div><span style="font-family: '黑体'; font-size: 20px; letter-spacing: 2px;">成都市人口稳定增长，有常住人口1604.5万人，比上年增长0.8％；城镇化率达71.9％；有户籍人口1435.3万人，其中城镇人口851.2万人、乡村人口584.1万人；出台人才新政十二条，全日制本科以上学历青年人才落户超过11万人。</span><div class="frame_back"></div></div>
+        </div>
+    </div>
+    <div class="page pg4">
+        <div class="intro">
+            <div class="text" style="margin-right: 50px;" id="pg4_text"><div class="frame_front"></div><span style="font-family: '黑体'; font-size: 20px; letter-spacing: 2px;">成都市土壤资源丰富，有水稻土、潮土、紫色土、黑色石灰土、棕色暗针叶林土、亚高山草甸土、高山草甸土、高山寒漠土、黄壤、山地黄棕壤、山地暗棕壤11个土壤类，20个亚类，56个土属，150个土种；土壤类型多样，养分充分，土层深厚，质地适中，适宜各种农作物及林草生长。</span><div class="frame_back"></div></div>
+            <div class="images" >
+                <img id="pg4_images" width="600px" height="423px" style="-webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+                filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));" src="images/im5.png" alt="稻田图">
+                <div class="images_back" id="pg4_back"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page pg5" id="qingchengshan">
+        <div class="intro">
+            <div class="images" >
+                <img id="pg5_images" width="600px" height="423px" style="-webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+                filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));" src="images/im6.png" alt="青城山"/>
+                <div class="images_back" id="pg5_back"></div>
+            </div>
+            <div class="text" style="margin-left: 50px;" id="pg5_text"><div class="frame_front"></div><span style="font-family: '黑体'; font-size: 20px; letter-spacing: 2px;">成都的山景具有高、险、奇、秀、幽的特色，有如“天下幽”的青城山、雄奇多姿的九峰山、高耸挺拔的西岭雪山、景色秀美的玉垒山；水景中有汹涌湍急的溪流，清澈明亮的水潭，飞珠溅玉的瀑布，秀美如画的湖泊；生物景观中有少见的桂花林、箭竹林、杜鹃林等植物群落，以及大熊猫、小熊猫、金丝猴等珍稀动物。</span><div class="frame_back"></div></div>
+        </div>
+    </div>
+    <div class="page pg6" id="panda">
+        <div class="panda_head">
+            <div class="panda_head_text1 text" style="color:#ffffff; font-family: 'Yu Gothic UI Semibold'; font-size: 20px; position: relative; top: 50px; letter-spacing: 5px;"><span>UNIQUE</span><span style="color: #d4d4d4; letter-spacing: 0px; font-size: 18px; position: relative; left: 650px;">taken on 2.11 2023<img width="25px" height="25px" style="position: relative; top: 5px; left: 5px;" src="images/时钟.png"/></span></div>
+            <div class="panda_head_text2 text" style="color:#d4d4d4; font-family: 'Yu Gothic UI Semibold'; font-size: 15px; margin-top: 250px;"><img width="20px" height="20px" style="position: relative; top: 5px;" src="images/标签.png"/><span style="margin-left: 5px;">The most cherished animal</span></div>
+            <div class="panda_head_text3 text" style="color:#ffffff; font-family: 'Yu Gothic UI Semibold'; font-size: 32px; letter-spacing: 2px; margin-top: 15px;"><span>PANDA,PANDA!</span></div>
+            <div class="panda_head_text4 text" style="color:#d4d4d4; font-family: 'Yu Gothic UI Semibold'; font-size: 18px; margin-top: 15px;"><span>from Chengdu Panda Breeding Base,</span></div>
+            <div class="panda_head_text5 text" style="color:#d4d4d4; font-family: 'Yu Gothic UI Semibold'; font-size: 18px;"><span>1375 Panda Avenue, Chenghua District, Chengdu City, Sichuan Province.</span></div>
+        </div>
+        <div class="panda_thumb_frame">
+            <div class="thumb"><img id="thumb" width="45px" height="45px" src="images/推荐1.png"/><span class="panda_thumb_frame_num1">50</span></div>
+            <div class="coin"><img id="coin" width="35px" height="35px" src="images/抛硬币.png"/><span class="panda_thumb_frame_num">50</span></div>
+            <div class="collect"><img id="collect" width="35px" height="35px" src="images/收藏.png"/><span class="panda_thumb_frame_num">50</span></div>
+            <div class="share"><img id="share" width="35px" height="35px" src="images/转发.png"/><span class="panda_thumb_frame_num">50</span></div>
+        </div>
+    </div>
+    <div class="page pg7">
+        <div class="article"><span style="font-family: '黑体'; font-size: 20px;">成都熊猫基地概况</span><br><span>成都大熊猫繁育研究基地，位于四川省成都市成华区熊猫大道1375号，距市中心10公里，距成都双流国际机场30余公里。是世界著名的大熊猫迁地保护基地、科研繁育基地、公众教育基地和教育旅游基地。基地占地面积1000亩。作为“大熊猫迁地保护生态示范工程”，以保护和繁育大熊猫、小熊猫等中国特有濒危野生动物而闻名于世。 [32] 成都大熊猫繁育研究基地是在成都动物园饲养、救治、繁育大熊猫的基础上建立起来的。1997年，建立开放实验室。2019年基地接待中外游客超900万人次。成都大熊猫繁育研究基地基地总面积达3570亩，其中扩建区面积为2535亩。基地以造园手法模拟大熊猫野外生态环境，大熊猫产房、熊猫饲养区、科研中心、熊猫医院分布有序，若干处豪华熊猫“别墅”散落于山林之中。扩建区充分遵循并沿用原始地形地貌，利用山体冲沟及溪流形成山地溪谷多层次景观带；根据熊猫主题特点，将项目总体划分为多个区域。截至2020年末，大熊猫种群数量达215只，是全球最大的圈养大熊猫人工繁殖种群。</span></div>
+        <div class="panda_images">
+            <div class="panda_big" style="margin-right: 50px;">
+                <div class="gallery-mask mask-off">
+                    <img class="mask-image" src="" alt="">
+                </div>
+                <div class="image-item-big image-1" alt="" style="background-image: url('images/panda1.jpg');"></div>
+            </div>
+            <div class="panda_small">
+                <div class="panda_small_1">
+                    <div class="gallery-mask mask-off">
+                        <img class="mask-image" src="" alt="">
+                    </div>
+                    <div class="image-item-small image-1" alt="" style=" margin-right: 50px; background-image: url('images/panda3.jpg');"></div>
+                    <div class="gallery-mask mask-off">
+                        <img class="mask-image" src="" alt="">
+                    </div>
+                    <div class="image-item-small image-1" alt="" style="background-image: url('images/panda4.jpg');"></div>
+                </div>    
+                <div class="panda_small_1" style="margin-top: 50px;">
+                    <div class="gallery-mask mask-off">
+                        <img class="mask-image" src="" alt="">
+                    </div>
+                    <div class="image-item-small image-1" alt="" style="margin-right: 50px; background-image: url('images/panda5.jpg');"></div>
+                    <div class="gallery-mask mask-off">
+                        <img class="mask-image" src="" alt="">
+                    </div>
+                    <div class="image-item-small image-1" alt="" style="background-image: url('images/panda6.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page pg8">
+        <div class="article" style="margin-top: 100px;"><span style="font-family: '黑体'; font-size: 20px;">成都大熊猫博物馆</span><br><span>成都大熊猫博物馆始建于1992年，2019年8月新馆开始布展建设，并于2021年3月3日正式对外开放。是一个具有科普、公众教育、展示、展品收藏、保护和学术研究功能的国际化、现代化的博物馆。整个博物馆设计的主题体现“人·大熊猫·自然和谐”的精神，通过互动体验、场景复原、沉浸式游览等方式，让公众在参观、娱乐的同时了解大熊猫等珍稀动物的生存现状，激发环境保护及动物保护意识、启迪科学探索精神、提高公众科学素养。
+            成都大熊猫博物馆建筑面积7179平方米，展示面积4342平方米，分为熊猫前传、竹林隐士、发现熊猫、濒危年代、保护之路、生态家园、创享未来七个主展区，建有一个3D影院和一个穹幕影院，是全球第一个以大熊猫为主题的互动体验专题博物馆。</span></div>
+        <div class="note">
+            <div class="yinhao y1"><img width="80px" height="80px" alt="" src="images/双引号1.png"/></div>
+            <div class="note_text"><span style="color: #b3b3b3; font-size: 18px; letter-spacing: 2px;">成都与其他地方大熊猫的不同之处：主要是刚出生的小熊猫和1-2岁的熊猫居多</span></div>
+            <div class="yinhao y2"><img alt="" width="80px" height="80px" src="images/双引号2.png"/></div>
+        </div>    
+    </div>
+    <div class="page pg9">
+        <div class="article" style="margin-top: 100px;"><span style="font-family: '黑体'; font-size: 20px;">熊猫科学探秘馆</span><br><span>熊猫科学探秘馆占地面积约1000平方米，以“熊猫研究基地概览”“神秘的大熊猫”“熊猫的恋爱与婚配”“熊猫的遗传探秘”“生命的摇篮”“熊猫和它的伙伴们”六个方面为展示主题，从科学、专业的角度，向中外游客展示了成都大熊猫繁育研究基地所从事的研究工作及取得的丰硕成果。在展示载体及展示方式上，引入了国际最新的展示设计理念和高科技展示方式，采取以多媒体展示为主，大幅展板导视为辅的方式，用40个触摸屏，向游客分别介绍了大熊猫繁殖、遗传、营养、内分泌等知识，游客只需轻轻动手触摸，信息量丰富的多媒体电脑显示屏，便将大熊猫的奥秘生动展示在了游客面前。同时，该馆还特别注重游客“探秘”的心理需求，将知识性与趣味性融为一体，增加了许多富有互动性与参与性的内容，以期达到“寓教于乐”的效果。</span></div>
+        <div class="note">
+            <div class="yinhao y1"><img width="80px" height="80px" alt="" src="images/双引号1.png"/></div>
+            <div class="note_text"><span style="color: #b3b3b3; font-size: 18px; letter-spacing: 2px;">大熊猫慢吞吞的动作使它能够保存能量，以适应低能量的食物。</span></div>
+            <div class="yinhao y2"><img alt="" width="80px" height="80px" src="images/双引号2.png"/></div>
+        </div>    
+    </div>
+    <div class="page pg10" id="chuanju">
+        <div class="img">
+            <div class="img1">
+                <div class="img-chuanju" id="c1" style="width: 280px; height: 280px; background-image: url(images/c1.png); background-size: cover; margin-right: 50px; margin-top: -200px;"></div>
+                <div class="img-chuanju" id="c7" style="width: 250px; height: 250px; background-image: url(images/c7.png); background-size: cover; margin-left: 0px;"></div>
+            </div>
+            <div class="img-chuanju" id="c3" style="width: 210px; height: 210px; background-image: url(images/c3.png); background-size: cover; margin-left: 300px; margin-top: 0px;"></div>
+            <div class="img1">
+                <div class="img-chuanju" id="c4" style="width: 250px; height: 250px; background-image: url(images/c4.png); background-size: cover; margin-left: 250px; margin-top: 50px;"></div>
+                <div class="img-chuanju" id="c5" style="width: 280px; height: 280px; background-image: url(images/c5.png); background-size: cover; margin-left: 0px; margin-top: -300px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page pg11">
+        <div class="chuanju_note_all">
+            <div class="chuanju_note n1">
+                <img width="512px" height="325px" alt="" src="images/c2.png">
+                <div id="chuanjut1" class="chuanju_text"><div class="chuanju_text_"><span style="font-size: 13px; letter-spacing: 2px; font-family: '微软雅黑';">川剧，俗称川戏，主要流行于中国西南地区川渝云贵四省市的汉族地区，是融汇高腔、昆曲、胡琴(即皮黄)、弹戏(即梆子)和四川民间灯戏五种声腔艺术而成的传统剧种。</span></div></div>
+                <div id="chuanjup1" class="piece">
+                    <img width="20px" height="20px" src="images/箭头.png">
+                </div>
+            </div>
+            <div class="chuanju_note n2">
+                <img width="512px" height="325px" alt="" src="images/c8.png">
+                <div id="chuanjut2" class="chuanju_text"><div class="chuanju_text_"><span style="font-size: 13px; letter-spacing: 2px; font-family: '微软雅黑';">川剧是汉族戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区 。川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。川剧由昆腔、高腔、胡琴、弹戏、灯调五种声腔组成。</span></div></div>
+                <div id="chuanjup2" class="piece">
+                    <img width="20px" height="20px" src="images/箭头(1).png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page pg12">
+        <div class="chuanju_note_all">
+            <div class="chuanju_note n3">
+                <img width="512px" height="325px" alt="" src="images/c9.png">
+                <div id="chuanjut3" class="chuanju_text"><div class="chuanju_text_"><span style="font-size: 13px; letter-spacing: 2px; font-family: '微软雅黑';">川剧始见于清末民初，早在明代就有戏班演出。川剧源流有不同说法，追溯到晚唐“杂剧”、南宋“川杂剧”，或川剧高腔尚早于江西“弋阳腔”、清代蜀伶魏长生所唱秦腔。川剧历史仍待研究探讨。</span></div></div>
+                <div id="chuanjup3" class="piece">
+                    <img width="20px" height="20px" src="images/箭头.png">
+                </div>
+            </div>
+            <div class="chuanju_note n4">
+                <img width="512px" height="325px" alt="" src="images/c10.png">
+                <div id="chuanjut4" class="chuanju_text"><div class="chuanju_text_"><span style="font-size: 13px; letter-spacing: 2px; font-family: '微软雅黑';">川剧源流沿革有不同说法，始见于清末民初，叫川戏，后统称川剧。明代已有戏班在省内演出。还有追溯到晚唐“杂剧”、南宋“川杂剧”的说法，待继续探讨。</span></div></div>
+                <div id="chuanjup4" class="piece">
+                    <img width="20px" height="20px" src="images/箭头(1).png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page pg13">
+        <div style="margin-top: 200px;" class="end"><span class="e1">Want to see more?</span><br><br><span class="e2">contact me</span></div>
+    </div>
+    <div class="page pg14"  id="places">
+        <div class="container_">
+            <div class="owl-carousel">
+                <div class="card c1">
+                    <div class="content">
+                      <h2 class="title">锦里</h2>
+                      <p class="copy">锦里主要景点有：锦里古街、古戏台、九品小吃街、诸葛井、西蜀第一牌坊、福寿巷、黄龙潭、阿斗井、民俗记忆墙、宋代石刻长廊、刘湘墓。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c2">
+                    <div class="content">
+                      <h2 class="title">春熙路</h2>
+                      <p class="copy">春熙路位于四川省成都市锦江区春熙路街道，覆盖北新街以东、总府路以南、红星路以西、东大街以北、南新街、中新街以及临街区域，面积大约20公顷。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c3">
+                    <div class="content">
+                      <h2 class="title">杜甫草堂</h2>
+                      <p class="copy">是中国唐代大诗人杜甫流寓成都时的故居，位于四川省成都市青羊区青华路38号。杜甫先后在此居住近四年，创作诗歌240余首。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c4">
+                    <div class="content">
+                      <h2 class="title">九眼桥</h2>
+                      <p class="copy">位于四川省成都市武侯区、锦江区一环路交界，古名宏济桥，又名镇江桥，狭义上指桥梁，如今广义上是指九眼桥片区。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c5">
+                    <div class="content">
+                      <h2 class="title">宽窄巷子</h2>
+                      <p class="copy">由宽巷子、窄巷子、井巷子平行排列组成，全为青黛砖瓦的仿古四合院落，这里也是成都遗留下来的较成规模的清朝古街道</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c6">
+                    <div class="content">
+                      <h2 class="title">人民公园</h2>
+                      <p class="copy">位于成都市区祠堂街少城路，始建于1911年，占地112639平方米，公园有金水溪、金鱼岛、盆景园等著名旅游景点。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+                <div class="card c7">
+                    <div class="content">
+                      <h2 class="title">天府广场</h2>
+                      <p class="copy">位于四川省成都市锦江区人民南路一段86号，是四川省及成都市的政治、文化中心和综合交通枢纽。</p>
+                      <button class="btn">View Trips</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright_"><span>版权所有©张盛罗 |地址：四川省成都市 |邮箱：2834065681@qq.com| 反馈意见：enthanlany@yandex.com</span></div>
+        </div>
+    </div>
+    <script src="jQuery/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="termtask2.js"></script>
+    <script src="termtask.js"></script>
+    <script src="termtask3.js"></script>
+    <script src="termtask4.js"></script>
+</body>
+</html>

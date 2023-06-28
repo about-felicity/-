@@ -1,0 +1,213 @@
+.note{
+    width: 1100px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.note_text{
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.y2{
+    margin-left: 1000px;
+}
+.pg10 .img{
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+.pg10 .img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-chuanju{
+    border-radius: 50%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(80px);
+}
+.img-chuanju_after1{
+    animation: img-chuanju 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.img-chuanju_after7{
+    animation: img-chuanju 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s both;
+    animation-fill-mode: forwards;
+}
+.img-chuanju_after3{
+    animation: img-chuanju 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s both;
+    animation-fill-mode: forwards;
+}
+.img-chuanju_after5{
+    animation: img-chuanju 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1.5s both;
+    animation-fill-mode: forwards;
+}
+.img-chuanju_after4{
+    animation: img-chuanju 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s both;
+    animation-fill-mode: forwards;
+}
+@keyframes img-chuanju{
+    0%{
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.chuanju_note_all{
+    width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.pg11 .n2,.pg12 .n4{
+    margin-top: 150px;
+    margin-left: 588px;
+}
+.pg11 .chuanju_text,.pg12 .chuanju_text{
+    width: 512px;
+    height: 325px;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(-329px);
+}
+.chuanju_text_{
+    width: 400px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.n1 .chuanju_text1{
+    animation: chuanju_text13 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n3 .chuanju_text3{
+    animation: chuanju_text13 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n2 .chuanju_text2{
+    animation: chuanju_text24 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n4 .chuanju_text4{
+    animation: chuanju_text24 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.pg11 .piece,.pg12 .piece{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#chuanjup1,#chuanjup3{
+    transform: translateY(-89px) translateX(600px);
+}
+#chuanjup2,#chuanjup4{
+    transform: translateY(-89px) translateX(-150px);
+}
+.n1 .piece1{
+    animation: chuanju_piece 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n3 .piece3{
+    animation: chuanju_piece 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n2 .piece2{
+    animation: chuanju_piece 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n4 .piece4{
+    animation: chuanju_piece 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+.n1 .piece{
+    background-color: #7e230d;
+}
+.n2 .piece{
+    background-color: #b96d37;
+}
+.n3 .piece{
+    background-color: #8b734e;
+}
+.n4 .piece{
+    background-color: #feb6ad;
+}
+@keyframes chuanju_text13{
+    0%{
+        width: 512px;
+        height: 325px;
+        transform: translateY(-329px) translateX(0px);
+    }
+    100%{
+        width: 400px;
+        height: 90px;
+        transform: translateY(-90px) translateX(200px);
+    }
+}
+@keyframes chuanju_text24{
+    0%{
+        width: 512px;
+        height: 325px;
+        transform: translateY(-329px) translateX(0px);
+    }
+    100%{
+        width: 400px;
+        height: 90px;
+        transform: translateY(-90px) translateX(-100px);
+    }
+}
+@keyframes chuanju_piece{
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        width: 50px;
+        height: 90px;
+        opacity: 1;
+    }
+}
+.pg13{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pg13 .end{
+    cursor: pointer;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Yu Gothic UI Semibold';
+}
+.e2{
+    position: relative;
+    opacity: 0;
+}
+.end:hover .e2{
+    animation: slide-bottom 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: forwards;
+}
+@keyframes slide-bottom {
+    0% {
+        opacity: 0;
+        top: 100px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
